@@ -8,9 +8,7 @@ public class Translator {
         if (i <= 0 || i > 12)
             throw new OutOfBoundError();
         String[] e = {
-            "Baisakh", "Jestha", "Ashad", "Shrawan", "Bhadra",
-            "Ashoj", "Kartik", "Mangsir", "Poush", "Magh",
-            "Falgun", "Chaitra"
+        		"Baisakh", "Jesth", "Ashadh", "Shrawan", "Bhadra", "Ashwin", "Kartik", "Mangsir", "Paush", "Magh", "Falgun", "Chaitra"
         };
         String[] n = {
             "बैशाख", "जेष्ठ", "आषाढ", "श्रावन", "भाद्र", "असोज",

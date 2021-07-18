@@ -5,16 +5,8 @@
 
   <groupId>com.maniv</groupId>
   <artifactId>Nepali-ad-bs-convert</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <packaging>jar</packaging>
-
-<distributionManagement>
-	<repository>
-		<id>github</id>
-		<name>Github lpanthi Apache Maven Packages</name>
-		<url>https://maven.pkg.github.com/lpanthi/Nepali-ad-bs-convert</url>
-	</repository>
-</distributionManagement>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -28,22 +20,12 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
-        <configuration>
-        	<source>8</source>
-        	<target>8</target>
-          <archive>
-            <manifest>
-              <mainClass>com.bsadutil.App</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+  <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub lpanthi Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/lpanthi/Nepali-ad-bs-convert</url>
+        </repository>
+    </distributionManagement>
+   
 </project>

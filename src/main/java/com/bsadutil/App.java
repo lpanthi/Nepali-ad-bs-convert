@@ -1,4 +1,5 @@
 package com.bsadutil;
+
 import com.bsadutil.core.Date;
 import com.bsadutil.dict.Ad;
 import com.bsadutil.dict.Bs;
@@ -16,14 +17,12 @@ public class App {
             Bs bs = new Bs();
 
             // Get some arbitrary date
-            Date<Ad> a = new Date<Ad>(2021, 7, 12, new Ad());
+            Date<Ad> a = new Date<Ad>(2000, 7, 12, new Ad());
             // Convert AD to BS
             Date<Bs> x = a.convertTo(bs);
-            // Convert BS to AD
-            // Date<Ad> y = x.convertTo(ad);
-
+           
             // Print header
-            System.out.println(Translator.anka(x.year(), true, 4) + "\t"
+            System.out.println("First  "+Translator.anka(x.year(), true, 4) + "\t"
                                 + Translator.mahina(x.month(), true) + "\t"
                                 + Translator.anka(x.day(), true, 2) + "\t"
                                 + Translator.bar(x.week(), true));
@@ -56,7 +55,7 @@ public class App {
             Date<Bs> nepaliDate;
             Date<Bs> anotherNepaliDate;
             // Date conversion
-            englishDate = new Date<Ad>("2017-07-5", ad);
+            englishDate = new Date<Ad>("2021-07-15", ad);
             anotherNepaliDate = new Date<Bs>(2070, 10, 11, bs);
             
             System.out.println(nepaliDate = englishDate.convertTo(bs));   // 2074-03-31
@@ -68,8 +67,12 @@ public class App {
             nepaliDate.week();                        // 7
             nepaliDate.daysInMonth();                 // 31
             nepaliDate.daysInYear();                  // 365
-            
-
+            System.out.println(nepaliDate.year());
+            System.out.println(nepaliDate.month());
+            System.out.println(nepaliDate.day());
+            String nepaliAnka = Translator.anka(nepaliDate.day(), true, 2);
+            System.out.println(nepaliAnka);
+            System.out.println(Translator.anka(Integer.parseInt(nepaliAnka), false, 2));
         } catch (Exception e) {
             System.out.println(e);
         }
